@@ -21,9 +21,13 @@ from django.views.generic.base import RedirectView
 from django.conf.urls import url
 
 urlpatterns = [
+    # index
     path('', views.index),
+    # 联系我们
     path('contactUs/', views.contactUs, name="contactUs"),
+    # 购物车
     path('shopping/', views.shopping, name="shopping"),
+    # 叮叮书店首页
     path('DingBookStore/', views.DingBookStore, name="DingBookStore"),
-    url(r'^favicon.ico$', RedirectView.as_view(url=r'static/picture/博客.ico')),
+    # url(r'^favicon.ico$', RedirectView.as_view(url=r'static/picture/博客.ico')),
 ]
